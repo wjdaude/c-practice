@@ -9,10 +9,15 @@ int main(){
     for(int i=0;i<persons;i++){
         scanf("%d %d", &height,&weight);
         bmi = weight / (height*0.01*height*0.01);
-        if(bmi>=25)
+        if(bmi>=25){
         printf("%.1f Overweight\n",bmi);
-        else
+        count++;
+        }
+        else{
          printf("%.1f Normal\n",bmi);
     }
+}
+    
+    printf("과체중 인원:%d명\n",count);
     return 0;
 }
